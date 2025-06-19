@@ -1,0 +1,42 @@
+{
+  "name": "claude-code-reverse",
+  "version": "1.0.0",
+  "description": "Reverse-engineered Claude Code CLI v1.0.19 with pluggable AI LLM integration",
+  "author": "davidgornshtein@gmail.com",
+  "license": "SEE LICENSE IN README.md",
+  "private": true,
+  "main": "cli-fully-refactored-final.cjs",
+  "scripts": {
+    "build": "node tools/build-fully-refactored-final-cli.js",
+    "fix-syntax": "node tools/multi-model-fix-parallel.js --verbose",
+    "validate": "node tools/validate-syntax.js",
+    "test": "echo \"See README.md for testing instructions\"",
+    "clean": "rm -rf build dist coverage *.cjs"
+  },
+  "dependencies": {
+    "commander": "^14.0.0",
+    "@google/generative-ai": "^0.24.1",
+    "openai": "^5.5.1",
+    "@babel/parser": "^7.26.5",
+    "dotenv": "^16.5.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apstenku123/claude-code-reverse.git"
+  },
+  "keywords": [
+    "claude",
+    "cli",
+    "reverse-engineering",
+    "ai",
+    "llm",
+    "gemini",
+    "openai"
+  ]
+}
