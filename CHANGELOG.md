@@ -5,7 +5,28 @@ All notable changes to the Claude Code v1.0.19 Reverse Engineering project will 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.1] - 2025-01-20
+## [1.0.2] - 2025-06-20
+
+### Added
+- Build instructions for src-organized directory
+- Documentation on how src-organized was created
+- Reorganization script details and statistics
+- Alternative build methods documentation
+
+### Documentation
+- Added comprehensive src-organized creation process
+- Documented reorganize-functions.js tool and its output
+- Added build configuration details
+- Included reorganization statistics (12,240 modules into 87 subdirectories)
+- Added quick build steps for users
+
+### Technical Details
+- src-organized created from src-fully-refactored-final using AST analysis
+- 15 major categories with 87 specialized subdirectories
+- Largest categories: utils/string (1,268), config/settings (1,115), data/processing (954)
+- Build creates cli-organized.cjs (21.73MB) in 35 seconds
+
+## [1.0.1] - 2025-06-20
 
 ### Added
 - Comprehensive tool documentation with detailed descriptions and outcomes
@@ -22,7 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added AI model performance comparison table
 - Documented pattern fix success rates
 
-## [1.0.0] - 2025-01-20
+## [1.0.0] - 2025-06-20
 
 ### Added
 - Complete reverse-engineered source code of Claude Code CLI v1.0.19
@@ -56,7 +77,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Pattern-based fix scripts for common syntax errors
 - Validation and analysis tools
 
-## [0.2.0] - 2025-01-19
+## [0.2.0] - 2025-06-19
 
 ### Added
 - Actual reverse engineering tools and complete flow documentation
@@ -68,7 +89,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated README with comprehensive reverse engineering methodology
 - Enhanced documentation structure
 
-## [0.1.0] - 2025-01-19
+## [0.1.0] - 2025-06-19
 
 ### Added
 - Initial project structure

@@ -436,6 +436,72 @@ node cli-fully-refactored-final.cjs "What is 2+2?"
 # Output: "4"
 ```
 
+## Building from src-organized
+
+### Understanding src-organized
+
+The `src-organized` directory contains 12,240 modules reorganized from `src-fully-refactored-final` into a logical project structure. This reorganization was performed using `tools/reorganize-functions.js` which:
+
+1. Analyzed each module using AST parsing and pattern matching
+2. Categorized modules into logical groups (utils, api, ui, etc.)
+3. Created subdirectories based on functionality
+4. Generated a comprehensive report (`src-organized/reorganization-report.json`)
+
+### How src-organized was Created
+
+```bash
+# The reorganization script that created src-organized
+node tools/reorganize-functions.js src-fully-refactored-final src-organized
+```
+
+**Reorganization Statistics**:
+- Total modules processed: 12,240
+- Categories created: 15 major categories
+- Subcategories: 87 specialized subdirectories
+- Largest categories:
+  - `utils/string`: 1,268 modules
+  - `config/settings`: 1,115 modules
+  - `data/processing`: 954 modules
+  - `errors/handlers`: 823 modules
+
+### Building the CLI from src-organized
+
+```bash
+# Primary build method - creates cli-organized.cjs
+node tools/build-organized-cli.js
+
+# Alternative build scripts available:
+node tools/build-functional-cli.js    # Creates cli-functional.cjs
+node tools/build-fully-functional-cli.js  # Creates cli-fully-functional.cjs
+```
+
+### Build Configuration
+
+The build uses the following configuration (from `tools/build-organized-cli.js`):
+
+```javascript
+const CONFIG = {
+    sourceDir: path.join(__dirname, '../src-organized'),
+    outputFile: path.join(__dirname, '../cli-organized.cjs'),
+    moduleMapFile: path.join(__dirname, '../module-map.json')
+};
+```
+
+### Testing the Built CLI
+
+```bash
+# Make executable
+chmod +x cli-organized.cjs
+
+# Test version
+./cli-organized.cjs --version
+# Output: 1.0.19 (Claude Code)
+
+# Test basic functionality
+./cli-organized.cjs "What is 2+2?"
+# Output: 4
+```
+
 ## Building the Project
 
 ### Prerequisites
@@ -446,28 +512,49 @@ npm install
 
 # Create .env file from template
 cp .env.example .env
-# Edit .env with your API keys (required for AI features)
+# Edit .env with your API keys (optional for AI features)
 ```
 
-### Build Steps
+### Quick Build Steps
 
-1. **Ensure all syntax errors are fixed**:
+1. **Build from src-organized (Recommended)**:
 
+   ```bash
+   node tools/build-organized-cli.js
+   # Creates: cli-organized.cjs (21.73MB)
+   ```
+
+2. **Test the build**:
+
+   ```bash
+   ./cli-organized.cjs --version
+   # Output: 1.0.19 (Claude Code)
+   ```
+
+### Alternative Build Methods
+
+If you need to rebuild from scratch:
+
+1. **Reorganize modules** (if src-organized doesn't exist):
+   ```bash
+   node tools/reorganize-functions.js src-fully-refactored-final src-organized
+   ```
+
+2. **Fix any syntax errors**:
    ```bash
    node tools/multi-model-fix-parallel.js --verbose
    ```
 
-2. **Build the CLI**:
-
+3. **Build with different strategies**:
    ```bash
-   node tools/build-fully-refactored-final-cli.js
-   ```
-
-3. **Test the build**:
-
-   ```bash
-   node cli-fully-refactored-final.cjs --version
-   # Output: 1.0.19 (Claude Code)
+   # Hierarchical organization
+   node tools/build-organized-cli.js
+   
+   # Function-first approach
+   node tools/build-functional-cli.js
+   
+   # Minimal build
+   node tools/build-working-cli.js
    ```
 
 ### Environment Variables
@@ -672,4 +759,4 @@ This is a reverse engineering project for educational and research purposes. The
 ---
 
 **Updated by davidgornshtein@gmail.com**  
-**Last Updated: January 20, 2025**
+**Last Updated: June 20, 2025**
