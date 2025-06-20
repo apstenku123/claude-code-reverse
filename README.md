@@ -393,33 +393,33 @@ Success rate: 99.99%
 ```
 
 ### Build Outcomes
-| Build Script | Output Size | Build Time | Status |
-|--------------|-------------|------------|--------|
-| build-fully-refactored-final-cli.js | 15MB | 28s | ✅ Success |
-| build-organized-cli.js | 21.73MB | 35s | ✅ Success |
-| build-functional-cli.js | 18.2MB | 31s | ✅ Success |
-| build-working-cli.js | 14.8MB | 26s | ✅ Success |
-| build-complete.js | 23.1MB | 42s | ✅ Success |
+| Build Script                        | Output Size | Build Time | Status    |
+| ----------------------------------- | ----------- | ---------- | --------- |
+| build-fully-refactored-final-cli.js | 15MB        | 28s        | ✅ Success |
+| build-organized-cli.js              | 21.73MB     | 35s        | ✅ Success |
+| build-functional-cli.js             | 18.2MB      | 31s        | ✅ Success |
+| build-working-cli.js                | 14.8MB      | 26s        | ✅ Success |
+| build-complete.js                   | 23.1MB      | 42s        | ✅ Success |
 
 ### AI Model Performance in Syntax Fixing
-| Model | Files Attempted | Fixed | Success Rate | Avg Time/File |
-|-------|-----------------|-------|--------------|---------------|
-| GPT-4.1 | 12,239 | 10,036 | 82% | 1.2s |
-| O4-Mini | 2,203 | 1,608 | 73% | 0.8s |
-| Gemini | 595 | 387 | 65% | 1.5s |
-| **Combined** | 12,239 | 12,239 | **99.99%** | 1.1s |
+| Model        | Files Attempted | Fixed  | Success Rate | Avg Time/File |
+| ------------ | --------------- | ------ | ------------ | ------------- |
+| GPT-4.1      | 12,239          | 10,036 | 82%          | 1.2s          |
+| O4-Mini      | 2,203           | 1,608  | 73%          | 0.8s          |
+| Gemini       | 595             | 387    | 65%          | 1.5s          |
+| **Combined** | 12,239          | 12,239 | **99.99%**   | 1.1s          |
 
 ### Pattern Fix Results
-| Pattern | Files Affected | Files Fixed | Fix Rate |
-|---------|----------------|-------------|----------|
-| Invalid Regex Ranges | 2,891 | 2,891 | 100% |
-| Function Name Corruption | 687 | 687 | 100% |
-| ES Module Syntax | 229 | 229 | 100% |
-| JSDoc Patterns | 156 | 156 | 100% |
-| React Duplicates | 89 | 89 | 100% |
-| CLI Duplicates | 134 | 134 | 100% |
-| Missing Functions | 45 | 45 | 100% |
-| Partial Corruption | 312 | 311 | 99.7% |
+| Pattern                  | Files Affected | Files Fixed | Fix Rate |
+| ------------------------ | -------------- | ----------- | -------- |
+| Invalid Regex Ranges     | 2,891          | 2,891       | 100%     |
+| Function Name Corruption | 687            | 687         | 100%     |
+| ES Module Syntax         | 229            | 229         | 100%     |
+| JSDoc Patterns           | 156            | 156         | 100%     |
+| React Duplicates         | 89             | 89          | 100%     |
+| CLI Duplicates           | 134            | 134         | 100%     |
+| Missing Functions        | 45             | 45          | 100%     |
+| Partial Corruption       | 312            | 311         | 99.7%    |
 
 ### Final CLI Validation
 ```bash
@@ -597,21 +597,21 @@ The project uses a custom module loader that:
 
 ### Processing Metrics
 
-| Metric | Value |
-|--------|--------|
-| Total Functions | 12,240 |
+| Metric             | Value           |
+| ------------------ | --------------- |
+| Total Functions    | 12,240          |
 | Successfully Fixed | 12,239 (99.99%) |
-| Lines of Code | ~500,000 |
-| Build Time | < 30 seconds |
-| Final Size | ~15MB |
+| Lines of Code      | ~500,000        |
+| Build Time         | < 30 seconds    |
+| Final Size         | ~15MB           |
 
 ### AI Model Performance
 
-| Model | Files Attempted | Success Rate | Avg Time/File |
-|-------|-----------------|--------------|---------------|
-| GPT-4.1 | 12,239 | 82% | 1.2s |
-| O4-Mini | 2,203 | 73% | 0.8s |
-| Gemini | 603 | 65% | 1.5s |
+| Model   | Files Attempted | Success Rate | Avg Time/File |
+| ------- | --------------- | ------------ | ------------- |
+| GPT-4.1 | 12,239          | 82%          | 1.2s          |
+| O4-Mini | 2,203           | 73%          | 0.8s          |
+| Gemini  | 603             | 65%          | 1.5s          |
 
 ### Error Categories Fixed
 

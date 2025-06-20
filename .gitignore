@@ -28,7 +28,6 @@ config.json
 *.profdata
 build/
 dist/
-*.cjs
 *.mjs
 
 # Node.js
