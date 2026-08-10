@@ -1,3 +1,5 @@
+
+
 # Claude Code v1.0.19 - Reverse Engineering Project
 
 **Copyright (c) 2025 davidgornshtein@gmail.com**  
@@ -517,11 +519,11 @@ cp .env.example .env
 
 ### Quick Build Steps
 
-1. **Build from src-organized (Recommended)**:
+1. **Build the CLI (Recommended)**:
 
    ```bash
-   node tools/build-organized-cli.js
-   # Creates: cli-organized.cjs (21.73MB)
+   npm run build
+   # Creates: cli-fully-refactored-final.cjs
    ```
 
 2. **Test the build**:
